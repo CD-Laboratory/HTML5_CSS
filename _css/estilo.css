@@ -1,0 +1,324 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@font-face{
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+/************************************************        
+          Formatacao do Genericas
+************************************************/
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dddddd;
+}
+
+p {
+  text-align: justify;
+  text-indent: 50px;
+}
+
+a {
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/************************************************        
+          Formatacao da Interface
+************************************************/
+
+div#interface{
+    width: 900px;
+    background-color: white;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    padding: 10px;
+}
+
+
+/************************************************        
+          Formatacao do Cabeçalho
+************************************************/
+
+header#cabecalho img#icone{
+    position: absolute;
+    left: 960px;
+    top: 70px;
+}
+
+header#cabecalho{
+     /* cria uma linha embaixo do cabeçalho */
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    /* inserir imagem de fundo + no-repeat para que a imagem seja inserida somente uma vez */
+    background-image: url("../_imagens/glass-logo-peq.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 80px;
+}
+
+header#cabecalho h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+    padding: 0px;
+     /* margem de baixo */
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15pt;
+    color: #888888;
+    padding: 0px;
+    margin-top: 0px;    
+}
+
+
+/************************************************        
+    Formatacao de imagens com legendas 
+************************************************/
+
+figure.foto-legenda {
+    /* faz com que a posicao tudo o que estiver dentro do figure, permanessa junto */
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+}
+
+figure.foto-legenda img {
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption {
+    opacity: 0;
+     /* faz com que a posicao da legenda seja ficxa dentro do figure */
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    /* padding cria um espaço dentro da legenda */
+    padding: 10px;
+    /* faz com que o espaço criado pelo padding fique dentro da borda */
+    box-sizing: border-box;
+    /* controla como a transicao da opacidade feita pelo hover será apresentada, no caso abaixo irá demorar 1 segundo entre exibir e não a configuração do hover */
+    transition: opacity 1s;
+}
+
+ /* hoveer dispara uma formatação especifica ao passar o mouse em cima do objeto (no caso o figcaption) */
+figure.foto-legenda:hover figcaption{
+    opacity: 1;
+}
+
+
+/************************************************        
+          Formatacao do menu
+************************************************/
+
+nav#menu{
+    /* faz com que o menu seja apresentado como um bloco*/
+    display: block;
+}
+nav#menu ul{
+  /* list-style some com as marcacoes da lista, os numeros ou os circulos da lista*/
+  list-style: none;
+  
+  /* esta funcao esta deixando as letras do menu maiusculas*/
+  text-transform: uppercase;
+  position: absolute;
+  top: -20px;
+  left: 480px;
+}
+
+nav#menu li{
+    /* esta funcao faz com que os itens sejam colocados na mesma linha*/
+    display: inline-block;
+    background-color: #dddddd;
+    
+     /* controla o espaço dentro da caixa do objeto, no caso aqui o texto*/
+    padding: 10px;
+    
+     /* controla o espaço fora da caixa do objeto, no caso aqui o texto*/
+    margin: 2px;
+    transition: background-color 1s;
+}
+
+/* hover dispara o efeito aplicado na formatação quando passar o mouse por cima do menu*/
+nav#menu li:hover{
+    background-color: #606060;
+}
+
+nav#menu h1{
+   display: none;
+}
+
+nav#menu a{
+  color: black;
+  /* tira o sublinhado da tag de menu*/
+  text-decoration: none;
+}
+
+nav#menu a:hover{
+  color: white;
+}
+
+
+/************************************************        
+          Formatacao do corpo
+************************************************/
+
+section#corpo {
+  display: block;
+  width: 500px; 
+  /* o float faz com que a section flutue (fique) do lado que desejar*/
+  float: left;
+  /* cria uma linha (borda) a direita da section */
+  border-right: 1px solid #606060;
+  padding-right: 15px;
+}
+
+article#noticia-principal h2{
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1{
+    font-family: 'FonteLogo';
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+header#cabecalho-artigo h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;   
+}
+
+header#cabecalho-artigo h3{
+    font-size: 12pt;
+    color: #606060;
+}
+
+.direita {
+    text-align: right;
+}
+
+table#tabelaspec {
+  border: 1px solid #606060; 
+ /* borda do espaos da tabela */
+  border-spacing: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table#tabelaspec td {
+  border: 1px solid #606060; 
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table#tabelaspec td.ce {
+  color: white;
+  background-color: #606060;     
+  text-align: right;
+  vertical-align: top;
+  font-weight: bold;
+}
+
+table#tabelaspec td.cd {
+  background-color: #cecece;  
+  text-align: left;
+}
+
+table#tabelaspec caption {
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+table#tabelaspec caption span {
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+video#ind-fil01 {
+   display: block;
+   position: relative;
+   margin: 10px 0px 10px 0px;
+   padding: 10px 0px 10px 0px;
+}
+
+
+/************************************************        
+          Formatacao do lateral
+************************************************/
+
+aside#lateral {
+  display: block;
+  width: 350px; 
+  /* o float faz com que a section flutue (fique) do lado que desejar*/
+  float: right;
+  background-color: #dddddd;
+  padding: 10px;
+  margin-top:10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+aside#lateral h1{
+  font-family: 'FonteLogo', sans-serif;
+  font-size: 20pt;
+  color: #606060;
+  margin-top: 0px;
+}
+
+aside#lateral h2{
+  background-color: #606060;
+  font-size: 13pt;
+  color: #ffffff; 
+  padding: 5px;
+  margin-bottom: 0px;
+}
+
+video#ind-fil02 {
+   display: block;
+   position: relative;
+   width: 350px; 
+   margin-top: 0px;
+   margin-right: 10px;    
+   padding-top: 0px;
+ 
+}
+
+/************************************************        
+          Formatacao do rodape
+************************************************/
+
+footer#rodape {
+  /* limpa a configuração dos dois lados, ou seja, limpa a divisão feita pela section e o asidde*/
+  clear: both; 
+   /* cria uma linha (borda) em cima do rodape */
+  border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+    text-align: center;
+}
